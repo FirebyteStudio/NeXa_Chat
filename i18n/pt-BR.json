@@ -1,0 +1,12 @@
+{
+  "app_name": "NeXa Chat",
+  "login_title": "Entrar no NeXa",
+  "email": "Email",
+  "password": "Senha",
+  "login": "Entrar",
+  "register": "Cadastrar",
+  "confirm_email": "Confirme seu email para continuar",
+  "chat_title": "Conversas",
+  "placeholder_message": "Digite sua mensagem",
+  "send": "Enviar"
+}
