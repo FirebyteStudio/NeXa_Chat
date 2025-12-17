@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>NeXa Chat</title>
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/glass.css" />
+</head>
+<body>
+
+  <div class="glass" style="width:400px; padding:20px;">
+    <h3 data-i18n="contacts_title"></h3>
+    <div id="contacts"></div>
+  </div>
+
+  <script type="module">
+    import { loadLang } from "./js/i18n.js";
+    import "./js/contacts.js";
+    loadLang();
+  </script>
+</body>
+</html>
