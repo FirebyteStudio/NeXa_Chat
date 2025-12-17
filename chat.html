@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>NeXa Chat</title>
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/glass.css" />
+
+  <style>
+    .chat-container {
+      width: 95%;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    #messages {
+      flex: 1;
+      overflow-y: auto;
+      margin: 15px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .message {
+      max-width: 70%;
+      padding: 10px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    .input-area {
+      display: flex;
+      gap: 10px;
+    }
+
+    input, button, select {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+    }
+
+    button {
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glass chat-container">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h3 data-i18n="chat_title"></h3>
+
+      <select onchange="setLang(this.value)">
+        <option value="pt-BR">🇧🇷</option>
+        <option value="en">🇺🇸</option>
+        <option value="es">🇪🇸</option>
+        <option value="ja">🇯🇵</option>
+        <option value="ko">🇰🇷</option>
+        <option value="fr">🇫🇷</option>
+      </select>
+    </div>
+
+    <div id="messages"></div>
+
+    <div class="input-area">
+      <input id="msg" style="flex:1" data-i18n-placeholder="placeholder_message" />
+      <button onclick="sendMessage()" data-i18n="send"></button>
+    </div>
+  </div>
+
+  <script type="module">
+    import { loadLang, setLang } from "./js/i18n.js";
+    import "./js/chat.js";
+
+    window.setLang = setLang;
+    loadLang();
+  </script>
+</body>
+</html>
