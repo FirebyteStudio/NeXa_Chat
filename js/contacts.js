@@ -1,9 +1,7 @@
 import { supabase } from "./supabase.js";
+import { t } from "./i18n.js";
 
 const list = document.getElementById("contacts");
-
-const t = key =>
-  document.querySelector(`[data-i18n="${key}"]`)?.textContent || key;
 
 const loadConversations = async () => {
   const { data: { user } } = await supabase.auth.getUser();
