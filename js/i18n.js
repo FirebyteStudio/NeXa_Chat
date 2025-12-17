@@ -1,4 +1,4 @@
-let lang = localStorage.getItem("lang") || "en";
+let lang = localStorage.getItem("lang") || "pt-BR";
 let translations = {};
 
 export async function loadLang() {
@@ -6,14 +6,18 @@ export async function loadLang() {
   translations = await res.json();
 
   document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
+    const key = el.dataset.i18n;
     if (translations[key]) el.textContent = translations[key];
   });
 
   document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
-    const key = el.getAttribute("data-i18n-placeholder");
+    const key = el.dataset.i18nPlaceholder;
     if (translations[key]) el.placeholder = translations[key];
   });
+}
+
+export function t(key) {
+  return translations[key] || key;
 }
 
 export function setLang(newLang) {
