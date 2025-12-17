@@ -1,0 +1,12 @@
+{
+  "app_name": "NeXa Chat",
+  "login_title": "NeXaにログイン",
+  "email": "メール",
+  "password": "パスワード",
+  "login": "ログイン",
+  "register": "登録",
+  "confirm_email": "メールを確認してください",
+  "chat_title": "チャット",
+  "placeholder_message": "メッセージを入力",
+  "send": "送信"
+}
