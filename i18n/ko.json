@@ -1,0 +1,12 @@
+{
+  "app_name": "NeXa Chat",
+  "login_title": "NeXa 로그인",
+  "email": "이메일",
+  "password": "비밀번호",
+  "login": "로그인",
+  "register": "가입하기",
+  "confirm_email": "이메일을 확인하세요",
+  "chat_title": "대화",
+  "placeholder_message": "메시지 입력",
+  "send": "보내기"
+}
