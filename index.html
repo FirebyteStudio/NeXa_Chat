@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>NeXa Chat</title>
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/glass.css" />
+
+  <style>
+    .login-box {
+      width: 340px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    input, button, select {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+    }
+
+    button {
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glass login-box">
+    <h2 data-i18n="login_title"></h2>
+
+    <input id="email" data-i18n-placeholder="email" />
+    <input id="password" type="password" data-i18n-placeholder="password" />
+
+    <button onclick="login()" data-i18n="login"></button>
+    <button onclick="register()" data-i18n="register"></button>
+
+    <select onchange="setLang(this.value)">
+      <option value="pt-BR">🇧🇷 Português</option>
+      <option value="en">🇺🇸 English</option>
+      <option value="es">🇪🇸 Español</option>
+      <option value="ja">🇯🇵 日本語</option>
+      <option value="ko">🇰🇷 한국어</option>
+      <option value="fr">🇫🇷 Français</option>
+    </select>
+  </div>
+
+  <script type="module">
+    import { loadLang, setLang } from "./js/i18n.js";
+    import "./js/auth.js";
+
+    window.setLang = setLang;
+    loadLang();
+  </script>
+</body>
+</html>
