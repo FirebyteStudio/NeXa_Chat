@@ -9,4 +9,10 @@
   "chat_title": "チャット",
   "placeholder_message": "メッセージを入力",
   "send": "送信"
+  "users_title": "ユーザー",
+  "start_chat": "チャットを開始",
+  "contacts_title": "チャット",
+  "open_chat": "チャットを開く",
+  "no_users": "ユーザーが見つかりません",
+  "no_conversations": "まだ会話はありません"
 }
