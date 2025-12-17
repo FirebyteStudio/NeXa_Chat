@@ -2,7 +2,7 @@ let lang = localStorage.getItem("lang") || "en";
 let translations = {};
 
 export async function loadLang() {
-  const res = await fetch(`./i18n/${lang}.json`);
+  const res = await fetch(`i18n/${lang}.json`);
   translations = await res.json();
 
   document.querySelectorAll("[data-i18n]").forEach(el => {
