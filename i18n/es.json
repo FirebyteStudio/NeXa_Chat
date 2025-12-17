@@ -9,4 +9,10 @@
   "chat_title": "Conversaciones",
   "placeholder_message": "Escribe un mensaje",
   "send": "Enviar"
+  "users_title": "Usuarios",
+  "start_chat": "Iniciar chat",
+  "contacts_title": "Chats",
+  "open_chat": "Abrir chat",
+  "no_users": "No se encontraron usuarios",
+  "no_conversations": "Aún no hay conversaciones"
 }
