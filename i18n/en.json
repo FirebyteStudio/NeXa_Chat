@@ -9,4 +9,10 @@
   "chat_title": "Chats",
   "placeholder_message": "Type a message",
   "send": "Send"
+  "users_title": "Users",
+  "start_chat": "Start chat",
+  "contacts_title": "Chats",
+  "open_chat": "Open chat",
+  "no_users": "No users found",
+  "no_conversations": "No conversations yet"
 }
